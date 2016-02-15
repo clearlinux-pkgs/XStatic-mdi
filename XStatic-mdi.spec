@@ -4,7 +4,7 @@
 #
 Name     : XStatic-mdi
 Version  : 1.1.70.1
-Release  : 2
+Release  : 3
 URL      : https://pypi.python.org/packages/source/X/XStatic-mdi/XStatic-mdi-1.1.70.1.tar.gz
 Source0  : https://pypi.python.org/packages/source/X/XStatic-mdi/XStatic-mdi-1.1.70.1.tar.gz
 Summary  : mdi 1.1.70 (XStatic packaging standard)
