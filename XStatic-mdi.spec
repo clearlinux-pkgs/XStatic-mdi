@@ -4,7 +4,7 @@
 #
 Name     : XStatic-mdi
 Version  : 1.4.57.0
-Release  : 13
+Release  : 14
 URL      : http://pypi.debian.net/XStatic-mdi/XStatic-mdi-1.4.57.0.tar.gz
 Source0  : http://pypi.debian.net/XStatic-mdi/XStatic-mdi-1.4.57.0.tar.gz
 Summary  : mdi 1.4.57 (XStatic packaging standard)
