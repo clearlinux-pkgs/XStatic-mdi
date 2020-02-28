@@ -4,7 +4,7 @@
 #
 Name     : XStatic-mdi
 Version  : 1.6.50.2
-Release  : 17
+Release  : 18
 URL      : https://files.pythonhosted.org/packages/1c/02/fb6e654eca3486fd74a80a51aada0e621225193957b0e5b97dc157c57c32/XStatic-mdi-1.6.50.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/1c/02/fb6e654eca3486fd74a80a51aada0e621225193957b0e5b97dc157c57c32/XStatic-mdi-1.6.50.2.tar.gz
 Summary  : mdi 1.6.50 (XStatic packaging standard)
@@ -16,18 +16,18 @@ BuildRequires : buildreq-distutils3
 
 %description
 XStatic-mdi
-        -----------
-        
-        mdi javascript library packaged for setuptools (easy_install) / pip.
-        
-        This package is intended to be used by **any** project that needs these files.
-        
-        It intentionally does **not** provide any extra code except some metadata
-        **nor** has any extra requirements. You MAY use some minimal support code from
-        the XStatic base package, if you like.
-        
-        You can find more info about the xstatic packaging way in the package
-        `XStatic`.
+-----------
+
+mdi javascript library packaged for setuptools (easy_install) / pip.
+
+This package is intended to be used by **any** project that needs these files.
+
+It intentionally does **not** provide any extra code except some metadata
+**nor** has any extra requirements. You MAY use some minimal support code from
+the XStatic base package, if you like.
+
+You can find more info about the xstatic packaging way in the package
+`XStatic`.
 
 %package python
 Summary: python components for the XStatic-mdi package.
@@ -43,6 +43,7 @@ python components for the XStatic-mdi package.
 Summary: python3 components for the XStatic-mdi package.
 Group: Default
 Requires: python3-core
+Provides: pypi(XStatic-mdi)
 
 %description python3
 python3 components for the XStatic-mdi package.
@@ -50,13 +51,15 @@ python3 components for the XStatic-mdi package.
 
 %prep
 %setup -q -n XStatic-mdi-1.6.50.2
+cd %{_builddir}/XStatic-mdi-1.6.50.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1570210936
+export SOURCE_DATE_EPOCH=1582850571
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
